@@ -7,11 +7,15 @@
 <hr>
 
 <div class="d-flex flex-row justify-content-between">
-    <div class="card" style="width: 18rem;" *ngFor="let recipe of recipes">
-      <img src={{recipe.imagePath}} class="card-img-top img-responsive" alt="..." >
-      <div class="card-body">
-        <h5 class="card-title">{{recipe.name}}</h5>
-        <p class="card-text">{{recipe.description}}</p>
+  <div class="row">
+    <div class="list-group" *ngFor="let recipe of recipes">
+      <div class="list-group-item d-flex flex-row justify-content-between">
+        <div class="d-flex flex-column">
+          <h5>{{recipe.name}}</h5>
+          <p>{{recipe.description}}</p>
+        </div>
+        <img src={{recipe.imagePath}} alt={{recipe.name}} width="50px" height="50px" >
       </div>
     </div>
+  </div>
 </div>
