@@ -7,5 +7,5 @@
 <hr>
 
 <div class="d-flex flex-column gap-xl-2" *ngFor="let recipe of recipes">
-  <app-recipe-item [recipe]="recipe"></app-recipe-item>
+  <app-recipe-item [recipe]="recipe" (selectedRecipe)="onRecipeSelected($event)"></app-recipe-item>
 </div>
